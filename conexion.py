@@ -2,10 +2,10 @@
 
 import pymysql
 
-connection = pymysql.connect("localhost",  "root",  "root.4dec" ,"erpy");
+connection = pymysql.connect("localhost",  "root",  "root" ,"erpy");
 cursor = connection.cursor();
 
-sql_query = "SELECT VERSION()";
+sql_query = "SELECT Nombre from Clientes";
 
 try :
     cursor.execute( sql_query );
