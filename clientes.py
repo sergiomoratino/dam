@@ -13,7 +13,7 @@ class clientes:
         except Exception as e :
             print("Exception : ", e);
 
-    def getNombre()
+    def getNombre():
         cursor = conexion.conecta()        
         sql_query = "SELECT nombre from Clientes";       
         try :
@@ -24,7 +24,7 @@ class clientes:
         except Exception as e :
             print("Exception : ", e);
 
-    def getApellidos()
+    def getApellidos():
         cursor = conexion.conecta()        
         sql_query = "SELECT apellidos from Clientes";       
         try :
@@ -35,7 +35,7 @@ class clientes:
         except Exception as e :
             print("Exception : ", e);
             
-    def getGenero()
+    def getGenero():
         cursor = conexion.conecta()        
         sql_query = "SELECT apellidos from Clientes";       
         try :

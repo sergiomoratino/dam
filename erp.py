@@ -3,7 +3,5 @@ import conexion
 from clientes import clientes
 
 
-        
-
-clientes.consultas()
+clientes.getDni()
 
