@@ -2,7 +2,7 @@ import conexion
 
 class clientes:
     dni = ''    
-    def consultas():
+    def getDni():
         cursor = conexion.conecta()        
         sql_query = "SELECT DNI from Clientes";       
         try :
@@ -13,7 +13,8 @@ class clientes:
         except Exception as e :
             print("Exception : ", e);
 
-
+dsafdf
+    
 
 
         
