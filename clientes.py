@@ -3,7 +3,7 @@ import conexion
 class clientes:
     dni = ''
 
-    
+    #CONSULTA PROPIA
     def consultaRegistro(sql_query, numRegistr):
         cursor = conexion.conecta()        
         try :
@@ -12,6 +12,9 @@ class clientes:
             return ''.join(data[numRegistr])     
         except Exception as e :
             print("Exception : ", e)
+
+
+    
 
 
         

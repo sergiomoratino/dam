@@ -7,3 +7,8 @@ def conecta():
     cursor = connection.cursor();
     return cursor
 
+
+#MODELO:
+
+
+
