@@ -3,5 +3,5 @@ import conexion
 from clientes import clientes
 
 
-clientes.getDni()
+print(clientes.consultaRegistro("SELECT Nombre from Clientes",1))
 
