@@ -10,7 +10,7 @@ class ClienteController:
         self.cliente_controller()
 
     def cliente_controller(self):
-        """Controlador general de País"""
+        """Controlador general de Cliente"""
         peticion = self.vista.mostrar_menu()
         self.peticion = int(peticion)
 
@@ -25,10 +25,13 @@ class ClienteController:
 
     def crear_cliente_controller(self):
         """Controlador para creación de nuevo país"""
-        (cliente_nombre, cliente_apellido) = self.vista.crear_cliente()
+        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion) = self.vista.crear_cliente()
         cliente = Cliente()
-        cliente.cliente = cliente_nombre
-        cliente.apellidos = cliente_apellido
+        cliente.dni = cliente_dni
+        cliente.nombre = cliente_nombre
+        cliente.apellidos = cliente_apellidos
+        cliente.genero = cliente_genero
+        cliente.direccion = cliente_direccion
         cliente.create()
         self.vista.confirmar_creacion()
         self.cliente_controller()
@@ -47,7 +50,7 @@ class ClienteController:
 
     def editar_clientes_controller(self):
         """Controlador para editar un país"""
-        listado = self.traer_clientes()
+        listado = self.traer_clientes
         (id, nombre, abbr) = self.vista.editar_cliente(listado)
         cliente = Cliente()
         cliente.dNI = dNi
