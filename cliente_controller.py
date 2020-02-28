@@ -25,13 +25,14 @@ class ClienteController:
 
     def crear_cliente_controller(self):
         """Controlador para creación de nuevo país"""
-        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion) = self.vista.crear_cliente()
+        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion, cliente_nacimiento) = self.vista.crear_cliente()
         cliente = Cliente()
         cliente.dni = cliente_dni
         cliente.nombre = cliente_nombre
         cliente.apellidos = cliente_apellidos
         cliente.genero = cliente_genero
         cliente.direccion = cliente_direccion
+        cliente.fNacimiento = cliente_nacimiento
         cliente.create()
         self.vista.confirmar_creacion()
         self.cliente_controller()

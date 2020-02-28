@@ -3,18 +3,14 @@ class ClienteView:
 
 
     def __init__(self):
-        self.tab1 = "    "
-        self.tab2 = "    " * 2
-        self.tab3 = "    " * 3
-        self.tab4 = "    " * 4
-        self.tab5 = "    " * 5
-        self.tab6 = "    " * 6
-        self.txt_opt = "%sElija una opción: " % self.tab2
-        self.txt_dni = "%sDNI: " % self.tab1
-        self.txt_cliente = "%sNombre: " % self.tab2
-        self.txt_apellidos = "%sApellidos: " % self.tab3
-        self.txt_genero = "%sGénero: " % self.tab4
-        self.txt_direccion = "%sDirección: " % self.tab5
+
+        #self.txt_opt = "%sElija una opción: " % self.tab2
+        self.txt_dni = "        DNI: "
+        self.txt_cliente = "        Nombre: "
+        self.txt_apellidos = "      Apellidos: " 
+        self.txt_genero = "     Género: " 
+        self.txt_direccion = "      Dirección: " 
+        self.txt_nacimiento = "      Fecha de Nacimiento: "
         pass
 
     def mostrar_menu(self):
@@ -46,9 +42,10 @@ class ClienteView:
         apellidos = input(self.txt_apellidos)
         genero = input(self.txt_genero)
         direccion = input(self.txt_direccion)
+        nacimiento = input(self.txt_nacimiento)
 
 
-        return (dni, nombre, apellidos, genero, direccion)
+        return (dni, nombre, apellidos, genero, direccion, nacimiento)
 
     def confirmar_creacion(self):
         """Vista de confirmación de creación de nuevo país"""
