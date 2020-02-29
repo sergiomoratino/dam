@@ -14,10 +14,11 @@ class Cliente:
         self.codPostal = ''
         self.db = DBConn()
 
+    ##OK##
     def create(self):
         """Crear un nuevo registro"""
-        query = "INSERT INTO Clientes (DNI, Nombre, Apellidos, Género, Dirección, FNacimiento) VALUES (%s, %s, %s, %s, %s, %s)"
-        values = (self.dni, self.nombre, self.apellidos, self.genero, self.direccion, self.fNacimiento)
+        query = "INSERT INTO Clientes (DNI, Nombre, Apellidos, Género, Dirección, FNacimiento, CódigoPostal) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+        values = (self.dni, self.nombre, self.apellidos, self.genero, self.direccion, self.fNacimiento, self.codPostal)
         self.db.ejecutar(query, values)
 
     def update(self):

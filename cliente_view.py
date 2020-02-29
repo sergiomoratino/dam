@@ -8,11 +8,13 @@ class ClienteView:
         self.txt_dni = "        DNI: "
         self.txt_cliente = "        Nombre: "
         self.txt_apellidos = "      Apellidos: " 
-        self.txt_genero = "     Género: " 
+        self.txt_genero = "         Género: " 
         self.txt_direccion = "      Dirección: " 
         self.txt_nacimiento = "      Fecha de Nacimiento: "
+        self.txt_postal = "      Cóidgo Postal: "
         pass
-
+   
+    ##OK##
     def mostrar_menu(self):
         """Vista del menú de opciones"""
 
@@ -30,7 +32,8 @@ class ClienteView:
 
         opcion =   input()
         return opcion
-
+    
+    ##OK##
     def crear_cliente(self):
         """Vista del formulario para crear nuevo país"""
 
@@ -43,9 +46,11 @@ class ClienteView:
         genero = input(self.txt_genero)
         direccion = input(self.txt_direccion)
         nacimiento = input(self.txt_nacimiento)
+        postal = input(self.txt_postal)
 
 
-        return (dni, nombre, apellidos, genero, direccion, nacimiento)
+
+        return (dni, nombre, apellidos, genero, direccion, nacimiento, postal)
 
     def confirmar_creacion(self):
         """Vista de confirmación de creación de nuevo país"""

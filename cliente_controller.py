@@ -23,9 +23,10 @@ class ClienteController:
         elif self.peticion == 4:
             self.eliminar_cliente_controller()
 
+    ##OK##
     def crear_cliente_controller(self):
         """Controlador para creación de nuevo país"""
-        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion, cliente_nacimiento) = self.vista.crear_cliente()
+        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion, cliente_nacimiento, cliente_postal) = self.vista.crear_cliente()
         cliente = Cliente()
         cliente.dni = cliente_dni
         cliente.nombre = cliente_nombre
@@ -33,6 +34,7 @@ class ClienteController:
         cliente.genero = cliente_genero
         cliente.direccion = cliente_direccion
         cliente.fNacimiento = cliente_nacimiento
+        cliente.codPostal = cliente_postal
         cliente.create()
         self.vista.confirmar_creacion()
         self.cliente_controller()
