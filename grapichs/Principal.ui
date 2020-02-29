@@ -268,9 +268,9 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>290</y>
-      <width>132</width>
+      <x>20</x>
+      <y>10</y>
+      <width>211</width>
       <height>31</height>
      </rect>
     </property>
@@ -281,16 +281,19 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(159, 255, 117);</string>
+    </property>
     <property name="text">
-     <string>ACTUALIZAR</string>
+     <string>ACTUALIZAR DATOS</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>430</y>
-      <width>176</width>
+      <x>571</x>
+      <y>308</y>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -300,6 +303,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(159, 255, 117);</string>
     </property>
     <property name="text">
      <string>AÑADIR CLIENTE</string>
@@ -308,9 +314,9 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>150</y>
-      <width>108</width>
+      <x>571</x>
+      <y>152</y>
+      <width>198</width>
       <height>31</height>
      </rect>
     </property>
@@ -321,17 +327,20 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(159, 255, 117);</string>
+    </property>
     <property name="text">
-     <string>ELIMINAR</string>
+     <string>ELIMINAR CLIENTE</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>210</y>
-      <width>211</width>
-      <height>51</height>
+      <x>571</x>
+      <y>230</y>
+      <width>201</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -340,6 +349,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(159, 255, 117);</string>
     </property>
     <property name="text">
      <string>BUSCAR CLIENTE</string>
