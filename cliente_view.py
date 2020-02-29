@@ -58,7 +58,7 @@ class ClienteView:
         print( """
         País creado con éxito!
         """)
-
+    ##OK##
     def listar_clientes(self, listado):
         """Vista para el listado de países"""
 
@@ -69,7 +69,12 @@ class ClienteView:
             id = row[0]
             cliente = row[1]
             apellidos = row[2]
-            print ("%s[%s] %s (%s)" % (self.tab3, id, cliente, apellidos))
+            genero = row[3]
+            direccion = row[4]
+            fNacimiento = row[5]
+            codPostal = row[6]
+            
+            print ("[%s] %s %s | Género:%s | Dirección:%s | Nacimiento:%s | Código Postal:%s" % (id, cliente, apellidos, genero, direccion, fNacimiento, codPostal))
 
     def editar_cliente(self, listado):
         """Vista del formulario para editar un país"""

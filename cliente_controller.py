@@ -43,7 +43,7 @@ class ClienteController:
         """Trae una lista de todos los países"""
         cliente = Cliente()
         listado = cliente.read_all()
-        return listado
+        return 
 
     def listar_clientes_controller(self):
         """Controlador del listado de países"""

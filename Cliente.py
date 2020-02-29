@@ -29,7 +29,7 @@ class Cliente:
 
     def read_all(self):
         """Leer todos los registros"""
-        query = "SELECT DNI, Nombre, Apellidos FROM Clientes"
+        query = "SELECT DNI, Nombre, Apellidos, Género, Dirección, FNacimiento, CódigoPostal FROM Clientes"
         return self.db.ejecutar(query)
 
     def read(self):
