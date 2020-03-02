@@ -6,8 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-import sys
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

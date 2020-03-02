@@ -69,6 +69,9 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "DNI"))
         self.label_3.setText(_translate("MainWindow", "NOMBRE"))
 
+    ##metodo para consult de buscar Cliente
+    
+
 
 if __name__ == "__main__":
     import sys
