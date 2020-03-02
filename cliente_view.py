@@ -1,3 +1,7 @@
+"""Cliente.py: Description of what foobar does."""
+
+__author__      = "Sergio Moratino & Sofian Naimi"
+__copyright__   = "Copyright 2020, DAM"
 from Cliente import Cliente
 class ClienteView:
 
@@ -19,11 +23,11 @@ class ClienteView:
         """Vista del menú de opciones"""
 
         menu = """
-        Menú del Gestor de Países
-            (1) Crear un país
-            (2) Ver listado de países
-            (3) Editar un país
-            (4) Eliminar un país
+        Menú del Gestor de Clientes
+            (1) Crear un cliente
+            (2) Ver listado de clientes
+            (3) Editar un cliente
+            (4) Eliminar un cliente
 
             (0) Salir
 
@@ -35,7 +39,7 @@ class ClienteView:
     
     ##OK##
     def crear_cliente(self):
-        """Vista del formulario para crear nuevo país"""
+        """Vista del formulario para crear nuevo cliente"""
 
         print ("""
         CREAR UN NUEVO CLIENTE
@@ -53,20 +57,20 @@ class ClienteView:
         return (dni, nombre, apellidos, genero, direccion, nacimiento, postal)
 
     def confirmar_creacion(self):
-        """Vista de confirmación de creación de nuevo país"""
+        """Vista de confirmación de creación de nuevo cliente"""
 
         print( """
-        País creado con éxito!
+        Cliente creado con éxito!
         """)
     ##OK##
     def listar_clientes(self, listado):
-        """Vista para el listado de países"""
+        """Vista para el listado de clientes"""
 
         print ("""
-            LISTADO DE PAÍSES:
+            LISTADO DE CLIENTES:
         """)
         for row in listado:
-            id = row[0]
+            dni = row[0]
             cliente = row[1]
             apellidos = row[2]
             genero = row[3]
@@ -74,37 +78,40 @@ class ClienteView:
             fNacimiento = row[5]
             codPostal = row[6]
             
-            print ("[%s] %s %s | Género:%s | Dirección:%s | Nacimiento:%s | Código Postal:%s" % (id, cliente, apellidos, genero, direccion, fNacimiento, codPostal))
+            print ("[%s] %s %s | Género:%s | Dirección:%s | Nacimiento:%s | Código Postal:%s" % (dni, cliente, apellidos, genero, direccion, fNacimiento, codPostal))
 
     def editar_cliente(self, listado):
-        """Vista del formulario para editar un país"""
+        """Vista del formulario para editar un cliente"""
 
-        self.listar_clientes(listado)
         print ("\n\n")
-        id = raw_input(self.txt_id)
+        dni = input(self.txt_dni)
         print ("\n")
-        cliente = raw_input(self.txt_cliente)
-        apellidos = raw_input(self.txt_apellidos)
-        return (id, cliente, apellidos)
+        cliente = input(self.txt_cliente)
+        apellidos = input(self.txt_apellidos)
+        genero = input(self.txt_genero)
+        direccion = input(self.txt_direccion)
+        fNacimiento = input(self.txt_nacimiento)
+        codPostal = input(self.txt_postal)
+        return (dni, cliente, apellidos, genero, direccion, fNacimiento, codPostal)
 
     def confirmar_editar_cliente(self):
         """Vista de confirmación de edición"""
 
         print ("""
-        País editado correctamente.
+        Cliente editado correctamente.
         """)
 
     def eliminar_cliente(self, listado):
-        """Vista de formulario para eliminar país"""
+        """Vista de formulario para eliminar cliente"""
 
         self.listar_clientes(listado)
         print ("\n\n")
-        id = raw_input(self.txt_id)
+        dni = input(self.txt_dni)
         print ("\n")
-        return id
+        return dni
 
     def confirmar_eliminar_cliente(self):
-        """Vista de cofirmación eliminar país"""
+        """Vista de cofirmación eliminar cliente"""
         print ("""
-        País eliminado correctamente.
+        Cliente eliminado correctamente.
         """)

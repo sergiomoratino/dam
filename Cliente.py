@@ -1,4 +1,10 @@
 # -*- coding: utf-8 *-*
+#!/usr/bin/env python
+
+"""Cliente.py: Description of what foobar does."""
+
+__author__      = "Sergio Moratino & Sofian Naimi"
+__copyright__   = "Copyright 2020, DAM"
 from db_conn import DBConn
 
 
@@ -23,8 +29,8 @@ class Cliente:
 
     def update(self):
         """Actualizar un registro existente"""
-        query = "UPDATE Clientes SET Cliente = %s, Nombre = %s WHERE DNI = %s"
-        values = (self.Cliente, self.nombre, self.dni)
+        query = "UPDATE Clientes SET Nombre = %s, Apellidos = %s, Género = %s, Dirección = %s, FNacimiento = %s, CódigoPostal = %s WHERE DNI = %s"
+        values = ( self.nombre, self.apellidos, self.genero, self.direccion, self.fNacimiento, self.codPostal, self.dni)
         return self.db.ejecutar(query, values)
 
     def read_all(self):
@@ -39,6 +45,6 @@ class Cliente:
 
     def delete(self):
         """Elimina uno o todos los registros"""
-        query = "DELETE FROM paises WHERE DNI = %s"
+        query = "DELETE FROM clientes WHERE DNI = %s"
         values = self.dni
         return self.db.ejecutar(query, values)
