@@ -1,6 +1,9 @@
 # -*- coding: utf-8 *-*
-import pymysql
+"""Cliente.py: Description of what foobar does."""
 
+__author__      = "Sergio Moratino & Sofian Naimi"
+__copyright__   = "Copyright 2020, DAM"
+import pymysql
 
 class DBConn:
 

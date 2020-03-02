@@ -1,4 +1,8 @@
 # -*- coding: utf-8 *-*
+"""Cliente.py: Description of what foobar does."""
+
+__author__      = "Sergio Moratino & Sofian Naimi"
+__copyright__   = "Copyright 2020, DAM"
 from Cliente import Cliente
 from cliente_view import ClienteView
 
@@ -10,7 +14,7 @@ class ClienteController:
         self.cliente_controller()
 
     def cliente_controller(self):
-        """Controlador general de País"""
+        """Controlador general de Cliente"""
         peticion = self.vista.mostrar_menu()
         self.peticion = int(peticion)
 
@@ -23,51 +27,59 @@ class ClienteController:
         elif self.peticion == 4:
             self.eliminar_cliente_controller()
 
+    ##OK##
     def crear_cliente_controller(self):
-        """Controlador para creación de nuevo país"""
-        (cliente_nombre, cliente_apellido) = self.vista.crear_cliente()
+        """Controlador para creación de nuevo cliente"""
+        (cliente_dni, cliente_nombre, cliente_apellidos, cliente_genero, cliente_direccion, cliente_nacimiento, cliente_postal) = self.vista.crear_cliente()
         cliente = Cliente()
-        cliente.cliente = cliente_nombre
-        cliente.apellidos = cliente_apellido
+        cliente.dni = cliente_dni
+        cliente.nombre = cliente_nombre
+        cliente.apellidos = cliente_apellidos
+        cliente.genero = cliente_genero
+        cliente.direccion = cliente_direccion
+        cliente.fNacimiento = cliente_nacimiento
+        cliente.codPostal = cliente_postal
         cliente.create()
         self.vista.confirmar_creacion()
         self.cliente_controller()
 
     def traer_clientes(self):
-        """Trae una lista de todos los países"""
+        """Trae una lista de todos los Clientes"""
         cliente = Cliente()
         listado = cliente.read_all()
         return listado
 
     def listar_clientes_controller(self):
-        """Controlador del listado de países"""
+        """Controlador del listado de clientes"""
         listado = self.traer_clientes()
         self.vista.listar_clientes(listado)
         self.cliente_controller()
 
     def editar_clientes_controller(self):
-        """Controlador para editar un país"""
-        listado = self.traer_clientes()
-        (id, nombre, abbr) = self.vista.editar_cliente(listado)
+        """Controlador para editar un cliente"""
+        listado = self.traer_clientes
+        (dni, nombre, apellidos, genero, direccion, fNacimiento, codPostal) = self.vista.editar_cliente(listado)
         cliente = Cliente()
-        cliente.dNI = dNi
+        cliente.dni = dni
         cliente.nombre = nombre
         cliente.apellidos = apellidos
+        cliente.genero = genero
+        cliente.direccion = direccion
+        cliente.fNacimiento = fNacimiento
+        cliente.codPostal = codPostal
         cliente.update()
         self.vista.confirmar_editar_cliente()
         self.cliente_controller()
 
     def eliminar_cliente_controller(self):
-        """Controlador para eliminar un país"""
+        """Controlador para eliminar un cliente"""
         listado = self.traer_clientes()
-        id = self.vista.eliminar_cliente(listado)
-        id = int(id)
+        dni = self.vista.eliminar_cliente(listado)        
         cliente = Cliente()
-        cliente.dNI = dNi
+        cliente.dni = dni
         cliente.delete()
         self.vista.confirmar_eliminar_cliente()
         self.cliente_controller()
-
 
 controller = ClienteController()
 
