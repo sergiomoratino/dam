@@ -5,18 +5,13 @@ __author__      = "Sergio Moratino & Sofian Naimi"
 __copyright__   = "Copyright 2020, DAM"
 from Cliente import Cliente
 from cliente_view import ClienteView
-from Eliminar_Cliente import Ui_EliminarCliente
-from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class ClienteController:
-    
 
     def __init__(self):
         self.vista = ClienteView()
         self.cliente_controller()
-        grapic = Ui_EliminarCliente()
-       
 
     def cliente_controller(self):
         """Controlador general de Cliente"""
@@ -77,23 +72,14 @@ class ClienteController:
         self.cliente_controller()
 
     def eliminar_cliente_controller(self):
-        import sys
-        app = QtWidgets.QApplication(sys.argv)
-        EliminarCliente = QtWidgets.QMainWindow()
         """Controlador para eliminar un cliente"""
         listado = self.traer_clientes()
-       # dni = self.vista.eliminar_cliente(listado)     
-        Ui_EliminarCliente().setupUi(EliminarCliente)
-        dni = Ui_EliminarCliente().eliminar()
+        dni = self.vista.eliminar_cliente(listado)        
         cliente = Cliente()
         cliente.dni = dni
         cliente.delete()
         self.vista.confirmar_eliminar_cliente()
         self.cliente_controller()
 
-
-
 controller = ClienteController()
-
-
 

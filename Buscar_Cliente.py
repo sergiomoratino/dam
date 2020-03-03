@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'Buscar_Cliente.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1e
-#e
+# Created by: PyQt5 UI code generator 5.10.1
+#
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets

@@ -3,7 +3,6 @@
 __author__      = "Sergio Moratino & Sofian Naimi"
 __copyright__   = "Copyright 2020, DAM"
 from Cliente import Cliente
-
 class ClienteView:
 
 
